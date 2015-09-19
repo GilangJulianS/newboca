@@ -42,21 +42,25 @@
 				android:id="@+id/detail_view"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
+				android:visibility="gone"
 				android:orientation="vertical">
 
 				<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="10dp"
+					android:gravity="center_vertical"
 					android:orientation="horizontal">
 
 					<ImageView
 						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"/>
+						android:layout_height="wrap_content"
+						android:src="@drawable/home_location"/>
 
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
 						android:text="Jl. Brigjen Katamso No.65\nCicadas Bandung"/>
 
 				</LinearLayout>
@@ -65,15 +69,18 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="10dp"
+					android:gravity="center_vertical"
 					android:orientation="horizontal">
 
 					<ImageView
 						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"/>
+						android:layout_height="wrap_content"
+						android:src="@drawable/home_phone"/>
 
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
 						android:text="+620930128781"/>
 
 				</LinearLayout>
@@ -84,36 +91,52 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:gravity="center_vertical"
 				android:orientation="horizontal">
 
 				<ImageView
 					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"/>
+					android:layout_height="wrap_content"
+					android:src="@drawable/home_date"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
 					android:text="Today"/>
 
 				<ImageView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_marginLeft="15dp"/>
+					android:layout_marginLeft="15dp"
+					android:src="@drawable/home_time"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
 					android:text="8.00-10.00"/>
 
-				<ImageView
+				<LinearLayout
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_marginLeft="15dp"/>
+					android:layout_marginLeft="15dp"
+					android:background="@drawable/home_attendees_bg"
+					android:gravity="center">
 
-				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="9"/>
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/home_attendees"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#fff"
+						android:layout_marginLeft="10dp"
+						android:text="9"/>
+
+				</LinearLayout>
 
 			</LinearLayout>
 

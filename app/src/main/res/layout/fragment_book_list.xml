@@ -45,10 +45,14 @@
 							android:textSize="@dimen/hello_text_size"
 							android:text="Hello, Habib"/>
 
-						<Button
-							android:id="@+id/book_button"
+						<TextView
+							android:id="@+id/btn_book"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:padding="15dp"
+							android:background="#57B5DB"
+							android:textColor="#fff"
 							android:text="BOOK A FIELD"/>
 
 					</LinearLayout>
@@ -66,11 +70,14 @@
 							android:layout_height="wrap_content"
 							android:text="BOCA CREDIT Rp150.000,00"/>
 
-						<Button
+						<TextView
 							android:id="@+id/btn_topup"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:layout_marginLeft="10dp"
+							android:layout_marginLeft="15dp"
+							android:gravity="center"
+							android:textColor="#fff"
+							android:background="@drawable/home_topup"
 							android:text="TOP UP"/>
 
 					</LinearLayout>
