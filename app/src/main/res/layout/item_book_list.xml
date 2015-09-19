@@ -8,11 +8,14 @@
 		android:id="@+id/card"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="@dimen/card_margin"
+		android:layout_marginLeft="@dimen/card_margin"
+		android:layout_marginRight="@dimen/card_margin"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
 		android:animateLayoutChanges="true"
 		android:foreground="?android:selectableItemBackground"
 		card_view:cardCornerRadius="4dp"
-		card_view:cardElevation="10dp"
+		card_view:cardElevation="5dp"
 		card_view:contentPadding="10dp">
 
 		<LinearLayout
@@ -20,25 +23,39 @@
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
 
-			<LinearLayout
+			<RelativeLayout
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal">
+				android:layout_height="wrap_content">
 
-				<TextView
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#57B5DB"
+						android:textSize="20sp"
+						android:text="Queen Futsal"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="15dp"
+						android:text="Lapangan B"/>
+
+				</LinearLayout>
+
+				<ImageView
+					android:id="@+id/icon_indicator"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:textColor="#57B5DB"
-					android:textSize="20sp"
-					android:text="Queen Futsal"/>
+					android:layout_alignParentRight="true"
+					android:rotation="180"
+					android:src="@drawable/home_expand"/>
 
-				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginLeft="15dp"
-					android:text="Lapangan B"/>
-
-			</LinearLayout>
+			</RelativeLayout>
 
 			<LinearLayout
 				android:id="@+id/detail_view"

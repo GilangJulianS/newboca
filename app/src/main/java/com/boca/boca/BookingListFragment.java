@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -53,24 +54,31 @@ public class BookingListFragment extends Fragment {
 
 		final int size = 10;
 		final List<ViewGroup> hiddenLayouts = new ArrayList<>();
+		final List<ImageView> expandButtons = new ArrayList<>();
 		for(int i=0; i<size; i++){
 			View item = inflater.inflate(R.layout.item_book_list, container, false);
 			CardView card = (CardView) item.findViewById(R.id.card);
-			ViewGroup g = (ViewGroup) card.findViewById(R.id.detail_view);
-			hiddenLayouts.add(g);
+			ViewGroup detailView = (ViewGroup) card.findViewById(R.id.detail_view);
+			hiddenLayouts.add(detailView);
+			ImageView expandButton = (ImageView) card.findViewById(R.id.icon_indicator);
+
+			expandButtons.add(expandButton);
 			final int id = i;
 			card.setOnClickListener(new View.OnClickListener() {
 				int listenerid = id;
 				@Override
 				public void onClick(View v) {
 					ViewGroup view = (ViewGroup) v.findViewById(R.id.detail_view);
-					if(view.getVisibility() == View.VISIBLE){
+					if(view.getVisibility() == View.VISIBLE){ // visible
 						view.setVisibility(View.GONE);
-					}else{
+						expandButtons.get(listenerid).setRotation(180);
+					}else{ //invisible
 						view.setVisibility(View.VISIBLE);
+						expandButtons.get(listenerid).setRotation(0);
 						for(int j=0; j<size; j++){
 							if(j != listenerid){
 								hiddenLayouts.get(j).setVisibility(View.GONE);
+								expandButtons.get(j).setRotation(180);
 							}
 						}
 					}
