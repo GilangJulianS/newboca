@@ -7,7 +7,10 @@
          https://developer.android.com/design/patterns/navigation-drawer.html -->
 	<dimen name="navigation_drawer_width">240dp</dimen>
 
-	<dimen name="list_header_height">250dp</dimen>
+	<dimen name="list_header_height">200dp</dimen>
+	<dimen name="item_book_height">150dp</dimen>
 
-	<dimen name="hello_text_size">40sp</dimen>
+	<dimen name="hello_text_size">36sp</dimen>
+
+	<dimen name="card_margin">15dp</dimen>
 </resources>
