@@ -34,6 +34,7 @@ public class BookingListFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
 		View v = inflater.inflate(R.layout.fragment_book_list, parent, false);
 		toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+		toolbar.setNavigationIcon(R.drawable.header_logo);
 		ViewGroup container = (ViewGroup) v.findViewById(R.id.list_container);
 		((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 		btnBook = (TextView) v.findViewById(R.id.btn_book);

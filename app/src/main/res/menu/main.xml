@@ -2,4 +2,17 @@
 	  xmlns:app="http://schemas.android.com/apk/res-auto"
 	  xmlns:tools="http://schemas.android.com/tools"
 	  tools:context=".MainActivity">
+
+	<item
+		android:id="@+id/btn_notif"
+		android:icon="@drawable/header_notif"
+		android:title="notification"
+		app:showAsAction="ifRoom"/>
+
+	<item
+		android:id="@+id/btn_settings"
+		android:icon="@drawable/header_setting"
+		android:title="settings"
+		app:showAsAction="ifRoom"/>
+
 </menu>
