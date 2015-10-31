@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction()
-				.replace(R.id.container, BookingListFragment.newInstance())
+				.replace(R.id.container, LoginFragment.newInstance())
 				.commit();
 
 //		mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 //			restoreActionBar();
 //			return true;
 //		}
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.global, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -71,11 +71,19 @@ public class MainActivity extends AppCompatActivity {
 			case R.id.btn_notif:
 				FragmentManager manager = getSupportFragmentManager();
 				manager.beginTransaction().replace(R.id.container, NotificationFragment
-						.newInstance()).commit();
+						.newInstance()).addToBackStack(null).commit();
 				break;
 		}
 
 		return super.onOptionsItemSelected(item);
 	}
 
+	@Override
+	public void onBackPressed() {
+		FragmentManager manager = getSupportFragmentManager();
+		if(manager.getBackStackEntryCount() > 0)
+			manager.popBackStack();
+		else
+			super.onBackPressed();
+	}
 }

@@ -2,10 +2,13 @@ package com.boca.boca;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -32,6 +35,7 @@ public class BookingListFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
+		setHasOptionsMenu(true);
 		View v = inflater.inflate(R.layout.fragment_book_list, parent, false);
 		toolbar = (Toolbar) v.findViewById(R.id.toolbar);
 		toolbar.setNavigationIcon(R.drawable.header_logo);
@@ -41,7 +45,9 @@ public class BookingListFragment extends Fragment {
 		btnBook.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
+				FragmentManager manager = getActivity().getSupportFragmentManager();
+				manager.beginTransaction().replace(R.id.container, BookingFragment.newInstance())
+						.addToBackStack("home").commit();
 			}
 		});
 		btnTopup = (TextView) v.findViewById(R.id.btn_topup);
@@ -88,5 +94,12 @@ public class BookingListFragment extends Fragment {
 			container.addView(item);
 		}
 		return v;
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.main, menu);
+
+		super.onCreateOptionsMenu(menu, inflater);
 	}
 }

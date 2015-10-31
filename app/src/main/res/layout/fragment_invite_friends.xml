@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+			android:layout_marginTop="?attr/actionBarSize"
+			android:paddingLeft="@dimen/fragment_padding_left"
+			android:paddingRight="@dimen/fragment_padding_right"
+			android:paddingTop="@dimen/fragment_padding_top"
+			android:padding="@dimen/fragment_padding_bottom">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minimum attendees" />
+
+                <EditText
+					android:id="@+id/form_min_attendees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="0"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="4dp"
+					android:gravity="center"
+					android:background="@color/app_grey"
+					android:textColor="#fff"
+                    android:ems="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="people" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+				android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charge per person"/>
+
+                <TextView
+					android:id="@+id/text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
+					android:gravity="center"
+					android:padding="7dp"
+					android:background="@color/app_blue"
+                    android:text="Rp 15.000"
+					android:textColor="#fff"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite Friends"
+                android:layout_marginTop="30dp"
+                android:id="@+id/textView19" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:padding="15dp"
+				android:background="#fff"
+				android:text="Yanfa Adi P."
+				android:textColor="@color/app_dark_blue"/>
+
+            <TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:gravity="center_vertical"
+				android:padding="15dp"
+				android:background="#fff"
+				android:text="13512000@itb.ac.id"
+				android:textColor="@color/app_dark_blue"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:padding="15dp"
+                android:hint="Friend's name or email"
+				android:textColor="#fff"
+				android:textColorHint="#fff"
+				android:background="@color/app_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cant_find_friend_text"
+				android:layout_marginTop="5dp"
+                android:id="@+id/textView20" />
+
+            <TextView
+				android:id="@+id/btn_invite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:gravity="center"
+				android:padding="15dp"
+				android:background="@color/app_orange"
+                android:text="INVITE"
+				android:textColor="#fff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+	<include layout="@layout/toolbar"/>
+
+</RelativeLayout>

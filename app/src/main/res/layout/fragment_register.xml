@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+			android:gravity="center_horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <EditText
+				android:id="@+id/form_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="20dp"
+				android:background="#C5C5C5"
+				android:singleLine="true"
+				android:textColor="#fff"
+				android:textColorHint="#fff"
+				android:nextFocusDown="@+id/form_email"
+				android:hint="Full name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write your full name so your friends can identify you"
+                android:paddingLeft="7dp"
+				android:layout_marginTop="5dp"
+                android:textSize="10sp"/>
+
+            <EditText
+				android:id="@+id/form_email"
+				android:nextFocusDown="@+id/form_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="5"
+				android:layout_marginTop="15dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="20dp"
+				android:background="#C5C5C5"
+				android:textColor="#fff"
+				android:textColorHint="#fff"
+				android:hint="Email address"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:textSize="10sp"
+				android:layout_marginTop="5dp"
+				android:text="Verification email will be sent to this email address"/>
+
+            <EditText
+				android:id="@+id/form_password"
+				android:nextFocusDown="@+id/form_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="8"
+				android:layout_marginTop="15dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="20dp"
+				android:background="#C5C5C5"
+				android:textColor="#fff"
+				android:textColorHint="#fff"
+				android:hint="Password"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+                android:text="Password should be 8 characters or more"
+                android:paddingLeft="7dp"
+                android:textSize="10sp"/>
+
+            <EditText
+				android:id="@+id/form_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="8"
+				android:layout_marginTop="15dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="20dp"
+				android:background="#C5C5C5"
+				android:textColor="#fff"
+				android:textColorHint="#fff"
+				android:hint="Confirm password"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+                android:text="Retype your password"
+                android:paddingLeft="7dp"
+                android:textSize="10sp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:text="By creating an account, you agree to Boca's "
+				android:textSize="12sp" />
+
+			<TextView
+				android:id="@+id/btn_termofservice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10dp"
+				android:text="@string/term_of_service"
+				android:textSize="12sp"
+				android:textColor="@android:color/holo_blue_dark"
+				android:clickable="true"/>
+
+            <TextView
+				android:id="@+id/btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:gravity="center"
+				android:background="@color/app_orange"
+				android:textSize="18sp"
+				android:textColor="#fff"
+				android:text="Sign Up"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+	<include layout="@layout/toolbar"/>
+
+</RelativeLayout>

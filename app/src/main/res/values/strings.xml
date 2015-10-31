@@ -1,9 +1,13 @@
 <resources>
 	<string name="app_name">Boca</string>
 
-	<string name="title_section1">Section 1</string>
-	<string name="title_section2">Section 2</string>
-	<string name="title_section3">Section 3</string>
+	<string name="title_section1">LOGIN</string>
+	<string name="title_section2">SIGN UP</string>
+	<string name="title_section3">SET TIME</string>
+	<string name="title_section4">PAYMENT</string>
+	<string name="title_section5">INVITE FRIENDS</string>
+	<string name="title_section6">CONFIRMATION</string>
+
 
 	<string name="navigation_drawer_open">Open navigation drawer</string>
 	<string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,4 +15,11 @@
 	<string name="action_example">Example action</string>
 
 	<string name="action_settings">Settings</string>
+
+	<!-- used in fragment as fix text-->
+	<string name="term_of_service"><u>Term of Service</u></string>
+	<string name="booking_details"><b>Booking Details</b></string>
+	<string name="cant_find_friend_text">Can\'t find your friends? Invite them using their e-mail address</string>
+	<string name="payment_agreement">Boca lets you share the bill with up to 50 friends. You can send invitations and set minimum number of attendees to play. If within 3 hours less people accepted, your booking will be canceled</string>
+	<string name="confirmation_text">Your booking will be cancelled automatically after 3 hours if the number of attendees is less than what you set</string>
 </resources>

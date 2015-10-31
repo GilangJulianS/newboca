@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/fragment_padding_left"
+			android:paddingRight="@dimen/fragment_padding_right"
+			android:paddingBottom="25dp"
+			android:layout_marginTop="@dimen/fragment_padding_top"
+			android:gravity="center_horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/form_venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_grey"
+                android:paddingLeft="20dp"
+				android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#fff"
+				android:textColorHint="#fff"
+                android:hint="Select Venue"/>
+
+			<LinearLayout
+				android:id="@+id/venue_info"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="15dp"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<TextView
+					android:id="@+id/text_info"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:lineSpacingExtra="2dp"
+					android:text="3 futsal fields\nRp 100.000 - Rp 150.000 per hour"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:src="@drawable/home_location"/>
+
+					<TextView
+						android:id="@+id/text_address"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:lineSpacingExtra="2dp"
+						android:gravity="center_vertical"
+						android:text="Jl.Tubagus Ismail XIX No.1\nSekeloa, Coblong, Bandung"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:src="@drawable/home_phone"/>
+
+					<TextView
+						android:id="@+id/text_phone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:gravity="center_vertical"
+						android:text="+62 22 7216081"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+            <Spinner
+				android:id="@+id/spinner_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:background="@color/app_grey"
+				android:popupBackground="@color/app_grey"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="7dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+					android:src="@drawable/home_date"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+					android:layout_marginLeft="10dp"
+                    android:text="09/09/2015"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="VACANT HOURS"
+                    android:layout_weight="6"
+                    android:id="@+id/textView10" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Click to select"
+                    android:layout_weight="8"
+                    android:id="@+id/textView11" />
+            </LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/hours_info"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="7.00 - 8.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="8.00 - 9.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button2" />
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center" >
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="9.00 - 10.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button3" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="10.00 - 11.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button4" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="11.00 - 12.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button5" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="12.00 - 13.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button6" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="13.00 - 14.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button9" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="14.00 - 15.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button10" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="15.00 - 16.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button7" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="16.00 - 17.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button8" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="17.00 - 18.00"
+						android:layout_marginRight="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button11" />
+
+					<Button
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="18.00 - 19.00"
+						android:layout_marginLeft="10dp"
+						android:layout_weight="1"
+						android:id="@+id/button12" />
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/btn_book"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:padding="15dp"
+					android:gravity="center"
+					android:background="@color/app_orange"
+					android:textColor="#fff"
+					android:text="BOOK"/>
+
+			</LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+	<include layout="@layout/toolbar"/>
+
+</RelativeLayout>

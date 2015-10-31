@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:card_view="http://schemas.android.com/apk/res-auto"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="?attr/actionBarSize"
+			android:paddingLeft="@dimen/fragment_padding_left"
+			android:paddingRight="@dimen/fragment_padding_right"
+			android:paddingTop="@dimen/fragment_padding_top"
+			android:padding="@dimen/fragment_padding_bottom"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/booking_details"
+				android:textSize="28dp" />
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+				android:foreground="?android:selectableItemBackground"
+				card_view:cardCornerRadius="4dp"
+				card_view:cardElevation="5dp"
+				card_view:contentPadding="10dp">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Tubagus Futsal"
+							android:textColor="@android:color/holo_blue_dark" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Lapangan III"
+							android:layout_marginLeft="8dp"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginTop="4dp">
+
+						<ImageView
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:src="@drawable/home_location" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:text="Jl. Tubagus Ismail XIX No. 1\nSekeloa, Bandung"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:layout_marginTop="4dp">
+
+						<ImageView
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:src="@drawable/home_phone"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:text="+62 22 61492116"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:gravity="center_vertical">
+
+						<ImageView
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:src="@drawable/home_date"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:text="28/09/2015"
+							android:id="@+id/dateTextView" />
+
+						<ImageView
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:src="@drawable/home_time"
+							android:layout_marginLeft="25dp"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:text="09.00 - 10.00"
+							android:id="@+id/timeTextView" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Payment"
+				android:textSize="28dp"
+				android:id="@+id/textView28"
+				android:layout_marginTop="7dp"
+				android:layout_marginBottom="7dp"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Total price"
+					android:layout_weight="1"
+					android:id="@+id/textView29" />
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Rp 150.000,00"
+					android:padding="10dp"
+					android:background="#fff"
+					android:layout_weight="1"
+					android:id="@+id/totalPriceTextView" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:gravity="center_vertical">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Method"
+					android:layout_weight="1"
+					android:id="@+id/textView30" />
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Shared with friends"
+					android:background="#fff"
+					android:padding="10dp"
+					android:layout_weight="1"
+					android:id="@+id/methodTextView" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:gravity="center_vertical">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Minimum attendes"
+					android:layout_weight="1"
+					android:id="@+id/textView32" />
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="10"
+						android:background="#fff"
+						android:padding="10dp"
+						android:id="@+id/totalAttendeesTextView" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="people"
+						android:layout_marginLeft="15dp"
+						android:id="@+id/textView33" />
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:gravity="center_vertical">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Charge per person"
+					android:layout_weight="1"/>
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="Rp15.000,00"
+					android:background="#fff"
+					android:padding="10dp"
+					android:layout_weight="1"
+					android:id="@+id/chargePerPersonTextView" />
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/confirmation_text"
+				android:textSize="12dp"
+				android:id="@+id/textView34"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="5dp" />
+
+			<TextView
+				android:id="@+id/btn_confirm"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textColor="#fff"
+				android:background="@color/app_orange"
+				android:padding="15dp"
+				android:gravity="center"
+				android:text="CONFIRM" />
+
+		</LinearLayout>
+
+	</ScrollView>
+
+    <include layout="@layout/toolbar"/>
+
+</RelativeLayout>
